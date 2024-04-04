@@ -1,13 +1,5 @@
-<div align="center">
 
 # Laravel Deploy
-
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://ngocquyhoang.com)
-[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://ngocquyhoang.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-water.svg)](https://ngocquyhoang.com)
-
-</div>
-
 
 ## Config example:
 
@@ -28,13 +20,11 @@ jobs:
             -   name: Setup Enviroment
                 uses: shivammathur/setup-php@v2
                 with:
-                    php-version: '7.4'
-            -   name: Speed up the packages installation process
-                run: composer global require hirak/prestissimo
+                    php-version: '8.3'
             -   name: Install Packages
                 run: composer install --no-dev
             -   name: Deploy to Server
-                uses: ngocquyhoang/deploy@laravel
+                uses: rotfuchs/laravel-deploy@v0.1.1-alpha
                 with:
                     user: user
                     host: host
